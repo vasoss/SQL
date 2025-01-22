@@ -1,7 +1,11 @@
-Lesson 1
+#Lesson 1
+
+## Создание таблицы Shop
 
 create table shop (PartType text, PartName text, Exist boolean, SN integer, Price integer, DateIn date, DateOut timestamp with time zone);
 select * from shop;
+
+##  Добавление товаров
 
 insert into shop values
 ('bar', 'SteelBar', true, 220089523, 1000, '2024-10-30'),
@@ -14,6 +18,8 @@ insert into shop values
 SELECT NOW();
 
 update shop set DateOut = NOW();
+
+## Выборка товара по различным параметрам
 
 select PartType from shop group by PartType;
 select PartType, count (*) as total from shop group by PartType;
