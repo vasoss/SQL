@@ -2,6 +2,15 @@
 
 ## Создание таблицы Shop
 
+**Список характеристик**
+- Тип детали
+- Название детали
+- Наличие
+- Серийный номер
+- Цена
+- Дата поступления
+- Дата продажи
+
 create table shop (PartType text, PartName text, Exist boolean, SN integer, Price integer, DateIn date, DateOut timestamp with time zone);
 select * from shop;
 
