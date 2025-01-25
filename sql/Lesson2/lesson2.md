@@ -38,12 +38,19 @@ select * from shop as shop2;
 
 *еще один вариант поиска по substring*
 
+## Нумерация по определенному признаку
+
 select *, ROW_NUMBER() OVER () from shop;
+
+*просто пронумерует каждую строчку в отдельном столбце*
 
 select *, ROW_NUMBER() OVER (order by sn) from shop order by price;
 
+*пронумерует строки по возрастанию цены*
 
 select *, ROW_NUMBER() OVER (partition by parttype) from shop;
+
+*пронумирует строки по типу запчастей (в каждом отдельном типе нумерация будет идти заново*
 
 select *, ROW_NUMBER() OVER (order by datein) from shop order by price;
 
