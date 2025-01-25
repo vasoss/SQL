@@ -1,42 +1,47 @@
+# Создание таблицы из файла CSV
+## Выбор типов данных для столбцов
+
 create table yellow_tripdata
-(VendorId smallint,                   ##-- т.к. всего два типа перевозчиков**
 
-tpep_pickup_datetime timestamp,       ##-- дата + время (без пояса)**
+(VendorId smallint,                   *-- т.к. всего два типа перевозчиков*
 
-tpep_dropoff_datetime timestamp,      -- дата + время (без пояса)
+tpep_pickup_datetime timestamp,       *-- дата + время (без пояса)*
 
-passenger_count smallint,             --т.к. число пассажиров не большое
+tpep_dropoff_datetime timestamp,      *-- дата + время (без пояса)*
 
-trip_distance real,                   -- длина поездки с точностью до сотых
+passenger_count smallint,             *--т.к. число пассажиров не большое*
 
-pickup_longitude double precision,    -- координата с 14 знаками после запятой
+trip_distance real,                   *-- длина поездки с точностью до сотых*
 
-pickup_latitude double precision,     -- вторая координата посадки
+pickup_longitude double precision,    *-- координата с 14 знаками после запятой*
 
-RateCodeID smallint,                  -- какой то код оценки от 1 до 99
+pickup_latitude double precision,     *-- вторая координата посадки*
 
-store_and_fwd_flag boolean,           -- была ли поездка записана машиной и затем отправлена да/нет
+RateCodeID smallint,                  *-- какой то код оценки от 1 до 99*
 
-dropoff_longitude double precision,   -- первая координата высадки
+store_and_fwd_flag boolean,           *-- была ли поездка записана машиной и затем отправлена да/нет*
 
-dropoff_latitude double precision,    -- вторая координата высадки
+dropoff_longitude double precision,   *-- первая координата высадки*
 
-payment_type smallint,                -- тип оплаты (их не много)
+dropoff_latitude double precision,    *-- вторая координата высадки*
 
-fare_amount real,                     -- тариф по счетчику
+payment_type smallint,                *-- тип оплаты (их не много)*
 
-extra real,                           -- надбавки от 0.5-1 доллар
+fare_amount real,                     *-- тариф по счетчику*
 
-mta_tax real,                         -- налог 0.5
+extra real,                           *-- надбавки от 0.5-1 доллар*
 
-tip_amount real,                      -- чаевые
+mta_tax real,                         *-- налог 0.5*
 
-tolls_amount real,                    -- дорожные сборы
+tip_amount real,                      *-- чаевые*
 
-improvement_surcharge real,           -- доп сбор 0.3
+tolls_amount real,                    *-- дорожные сборы*
 
-total_amount real);                   -- итоговый чек
+improvement_surcharge real,           *-- доп сбор 0.3*
 
+total_amount real);                   *-- итоговый чек*
+
+## Копируем данные из файла
 
 copy yellow_tripdata 
 
