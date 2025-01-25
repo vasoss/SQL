@@ -16,26 +16,25 @@ select * from shop as shop2;
 
 ### Для булевых значений
 
-select * from shop where exist = true;
+* select * from shop where exist = true; *
 
 *true/false*
 
 ### Для текстовых значений
 
-select * from shop where partname like '%Ba_'
+* select * from shop where partname like '%Ba_' *
 
 *% - не проверяет все выражение*
 
-*_ - один любой символ*
+*'_' - один любой символ*
 
-select * from shop where cast (sn as text) like '230%'
+* select * from shop where cast (sn as text) like '230%' *
 
 *в данном случае при помощи % проверяем значения которые начинаются на 230*
 
 *cast необходим для обертки integer в text и последующего поиска*
 
-
-select * from shop where substring(cast(sn as text),1,3) = '230'
+* select * from shop where substring(cast(sn as text),1,3) = '230' *
 
 *еще один вариант поиска по substring*
 
