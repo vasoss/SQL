@@ -1,19 +1,35 @@
+# Урок 2
 
+## Объединение таблиц
+
+### Простое объединение **union all** (не проверяет совпадения)
 select * from shop as shop1
 union all
 select * from shop as shop2;
 
+### Объединение **union** (добавляет только не совпадающие строки)
 select * from shop as shop1
 union 
 select * from shop as shop2;
 
+## Селект по различным значениям 
+
+### Для булевых значений
+
+*true/false*
 select * from shop where exist = true;
 
+### Для текстовых значений
+
+* % - не проверяет все выражение *
+* _ - один любой символ *
 select * from shop where partname like '%Ba_'
 
-
+* в данном случае при помощи % проверяем значения которые начинаются на 230 *
+* cast необходим для обертки integer в text и последующего поиска *
 select * from shop where cast (sn as text) like '230%'
 
+* еще один вариант поиска по substring *
 select * from shop where substring(cast(sn as text),1,3) = '230'
 
 select *, ROW_NUMBER() OVER () from shop;
