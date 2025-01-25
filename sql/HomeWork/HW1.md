@@ -3,19 +3,26 @@
 
 create table yellow_tripdata
 
-(VendorId smallint,                   > *-- т.к. всего два типа перевозчиков*
-> ff
-tpep_pickup_datetime timestamp,       > *-- дата + время (без пояса)*
+(VendorId smallint,                   
+> *-- т.к. всего два типа перевозчиков*
 
-tpep_dropoff_datetime timestamp,      > *-- дата + время (без пояса)*
+tpep_pickup_datetime timestamp,       
+> *-- дата + время (без пояса)*
 
-passenger_count smallint,             > *--т.к. число пассажиров не большое*
+tpep_dropoff_datetime timestamp,      
+> *-- дата + время (без пояса)*
 
-trip_distance real,                   > *-- длина поездки с точностью до сотых*
+passenger_count smallint,             
+> *--т.к. число пассажиров не большое*
 
-pickup_longitude double precision,    > *-- координата с 14 знаками после запятой*
+trip_distance real,                   
+> *-- длина поездки с точностью до сотых*
 
-pickup_latitude double precision,     >*-- вторая координата посадки*
+pickup_longitude double precision,    
+> *-- координата с 14 знаками после запятой*
+
+pickup_latitude double precision,     
+>*-- вторая координата посадки*
 
 RateCodeID smallint,                  *-- какой то код оценки от 1 до 99*
 
