@@ -1,6 +1,6 @@
 create table yellow_tripdata
-(VendorId smallint,                   **-- т.к. всего два типа перевозчиков**
-tpep_pickup_datetime timestamp,       **-- дата + время (без пояса)**
+(VendorId smallint,                   ##-- т.к. всего два типа перевозчиков**
+tpep_pickup_datetime timestamp,       ##-- дата + время (без пояса)**
 tpep_dropoff_datetime timestamp,      -- дата + время (без пояса)
 passenger_count smallint,             --т.к. число пассажиров не большое
 trip_distance real,                   -- длина поездки с точностью до сотых
