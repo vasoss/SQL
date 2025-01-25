@@ -23,6 +23,7 @@ select * from shop where exist = true;
 ### Для текстовых значений
 
 *% - не проверяет все выражение*
+
 *_ - один любой символ*
 
 select * from shop where partname like '%Ba_'
@@ -32,7 +33,7 @@ select * from shop where partname like '%Ba_'
 
 select * from shop where cast (sn as text) like '230%'
 
-* еще один вариант поиска по substring *
+*еще один вариант поиска по substring*
 select * from shop where substring(cast(sn as text),1,3) = '230'
 
 select *, ROW_NUMBER() OVER () from shop;
