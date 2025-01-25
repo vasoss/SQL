@@ -25,7 +25,7 @@ pickup_latitude double precision,
 >*вторая координата посадки*
 
 RateCodeID smallint,                  
->* какой то код оценки от 1 до 99*
+>*какой то код оценки от 1 до 99*
 
 store_and_fwd_flag boolean,           
 >*была ли поездка записана машиной и затем отправлена да/нет*
